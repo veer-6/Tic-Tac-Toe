@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <meta name="description" content="A clean, responsive Tic Tac Toe game with 2-player and vs-Computer modes." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1 class="title">Tic&nbsp;Tac&nbsp;Toe</h1>
+      <p class="subtitle" id="status" aria-live="polite">Player X starts — tap a square</p>
+    </header>
+
+    <div class="mode" role="group" aria-label="Game mode">
+      <button class="mode__btn is-active" id="mode-2p" type="button">2 Players</button>
+      <button class="mode__btn" id="mode-cpu" type="button">vs Computer</button>
+    </div>
+
+    <div class="board" id="board" role="grid" aria-label="Tic Tac Toe board">
+      <button class="cell" data-index="0" role="gridcell" aria-label="Cell 1"></button>
+      <button class="cell" data-index="1" role="gridcell" aria-label="Cell 2"></button>
+      <button class="cell" data-index="2" role="gridcell" aria-label="Cell 3"></button>
+      <button class="cell" data-index="3" role="gridcell" aria-label="Cell 4"></button>
+      <button class="cell" data-index="4" role="gridcell" aria-label="Cell 5"></button>
+      <button class="cell" data-index="5" role="gridcell" aria-label="Cell 6"></button>
+      <button class="cell" data-index="6" role="gridcell" aria-label="Cell 7"></button>
+      <button class="cell" data-index="7" role="gridcell" aria-label="Cell 8"></button>
+      <button class="cell" data-index="8" role="gridcell" aria-label="Cell 9"></button>
+    </div>
+
+    <section class="scoreboard">
+      <div class="score" id="score-x">
+        <span class="score__label">X</span>
+        <span class="score__value" data-score="X">0</span>
+      </div>
+      <div class="score" id="score-draws">
+        <span class="score__label">Draws</span>
+        <span class="score__value" data-score="draws">0</span>
+      </div>
+      <div class="score" id="score-o">
+        <span class="score__label" id="o-label">O</span>
+        <span class="score__value" data-score="O">0</span>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button class="btn btn--primary" id="new-round" type="button">New Round</button>
+      <button class="btn" id="reset-all" type="button">Reset Scores</button>
+    </div>
+
+    <footer class="foot">Built to test a Vercel deploy.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
